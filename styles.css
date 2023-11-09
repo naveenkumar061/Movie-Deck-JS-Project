@@ -1,12 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
-
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
+body {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ffd07a;
+}
+::-webkit-scrollbar-track {
+  background-color: #ad7000;
+}
 header {
-  background-color: #333;
+  background-color: #ad7000;
   color: #fff;
   padding: 20px;
   text-align: left;
@@ -22,7 +33,6 @@ header > a {
   justify-content: center;
   margin: 10px;
 }
-
 #search-input {
   width: 300px;
   height: 30px;
@@ -40,14 +50,12 @@ header > a {
   color: white;
   cursor: pointer;
 }
-
 .sorting-options {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 15px;
 }
-
 #sort-by-date,
 #sort-by-rating {
   width: 225px;
@@ -70,12 +78,10 @@ header > a {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .active-tab {
   background-color: #333;
   color: #fff;
 }
-
 #movies-list {
   display: flex;
   flex-wrap: wrap;
@@ -83,43 +89,52 @@ header > a {
   list-style-type: none;
   padding: 20px 0;
 }
-
-/* Style the card element */
-.card {
+.poster {
+  /* border: 1px solid red; */
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+  height: 450px;
+  /* border: 1px solid #ff0000; */
+}
+.title {
+  height: 50px;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.vote-favouriteIcon {
+  /* border: 1px solid red; */
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 200px;
-  height: 375px;
+  margin-bottom: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 10px;
   border: 1px solid #333;
   border-radius: 5px;
 }
-
-/* Style the poster image element */
-.poster {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
-}
-
-/* Style the title element */
-.title {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.vote-favouriteIcon {
-  display: flex;
-  justify-content: space-around;
-}
-
-/* Style the vote count and vote average elements */
 .vote-count,
 .vote-average {
   font-size: 14px;
 }
-
-/* Style the favorite icon element */
 .favorite-icon {
   width: 20px;
   height: 20px;
@@ -128,13 +143,11 @@ header > a {
   place-items: center;
   margin-top: 15px;
 }
-
 .pagination {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 }
-
 #prev-button,
 #page-number-button,
 #next-button {
@@ -145,11 +158,12 @@ header > a {
   border-radius: 5px;
   cursor: pointer;
 }
-
-/* Style the footer element */
 footer {
-  background-color: #333;
+  background-color: #ad7000;
   color: white;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+}
+.added {
+  color: red;
 }
